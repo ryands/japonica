@@ -1,29 +1,21 @@
 # Japonica
 
-TODO: Write a gem description
+A cli tool for generating order email text from auction site links. Currently
+only Yahoo! Japan and Mbok are supported.
+
+This utility will populate the fields of the order form with data scraped from the
+content of the provided url.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-    gem 'japonica'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install japonica
+    $ git clone git://github.com/ryands/japonica.git japonica
+    $ cd japonica/
+    $ bundle install
+    $ rake install
 
 ## Usage
 
-TODO: Write usage instructions here
+	$ japonica order <yahoo or mbok auction link> <max_bid in yen> [bid type]
 
-## Contributing
+The [bid type] can be one of: `bid`, `snipe`, or `bin` (buy-it-now).
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
