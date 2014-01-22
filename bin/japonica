@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require 'japonica/cli'
+Japonica::CLI.start(ARGV)

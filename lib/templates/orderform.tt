@@ -1,0 +1,18 @@
+[ Auctions / Shopping Order Form ]
+
+Seller ID : <%= @auction.seller_id %>
+Item Name : <%= @auction.item_name %>
+Auction ID / Item URL : <%= @auction.url %>
+Max bid Price :   <%= @max_bid %> yen
+Bidding Options : <%= @bid_type %>
+
+<% if @include_billing %>
+Payment : ( Credit Card/Bank through PayPal ) 
+Shipping Options : EMS / Registered Airmail
+PayPal Account : 
+PayPal Confirmed Shipping Name and Address : 
+<% end %>
+
+<% unless @note.nil? %>
+note : <%= @note %>
+<% end %>
