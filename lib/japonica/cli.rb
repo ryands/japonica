@@ -17,6 +17,14 @@ module Japonica
 			puts ERB.new(File.read(File.join(template_path, 'orderform.tt'))).result(binding)
 		end
 
+		desc "batch FILE", "Batch generate from a file"
+		def batch(file)
+			File.readlines(file).each do |l|
+				url, max, type = l.split(' ')
+				order(url, max, type)
+			end
+		end
+
 		private 
 
 		def template_path
